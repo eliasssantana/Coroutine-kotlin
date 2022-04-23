@@ -26,6 +26,7 @@ fun playSound(file: String){
 }
 
 suspend fun main(){
+    // Cria chamadas assíncronas na mesma Thread, porém em coroutine diferentes
     runBlocking {
         launch {playBeat("x-x-x-x-x-x", "toms.aiff")}
         playBeat("x-----x-----", "crash_cymbal.aiff")
